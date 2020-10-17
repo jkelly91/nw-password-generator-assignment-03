@@ -39,7 +39,7 @@ https://jkelly91.github.io/nw-password-generator-assignment-03/
 6. Confirm Lower Case (Recommended)
 7. Confirm Upper Case (Recommended)
 
-![Example of Password generator]()
+![Example of Password generator](https://github.com/jkelly91/nw-password-generator-assignment-03/blob/main/images/03-javascript-homework-demo.png?raw=true)
 
 
 
