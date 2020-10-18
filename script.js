@@ -1,37 +1,43 @@
-// Assignment Code
+// // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-// TODO write a function that generates the password
-// TODO create a var to hold numbers, lowercase letters, uppercase letters and special characters
-// TODO create a variable to hold the password length
-// TODO prompt "How many characters would you like your password to contain?"
-//  TODO Confirm "Click Ok to confirm including special characters"
-//  TODO Confirm "Click Ok to confirm including numeric characters"
-//  TODO Confirm "Click Ok to confirm including lowercase characters"
-//  TODO Confirm "Click Ok to confirm including uppercase characters"
-
-
-
-var passwordLength = "";
+// declared variables for possible password characters
 var lowerChar = "abcdefghijklmnopqrstuvwxyz";
 var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numericChar = "0123456789"
-var specialChar = "!@#$%^&*()[]\?/.,~`"
+var numericChar = "0123456789";
+var specialChar = "!@#$%^&*=+-_><|()[]\/?.,~`";
+var pLength = "";
+var passwordCharSet = "";
 
 
 
-function passwordGenerator(len) {
-  var length =
+
+function writePassword() {
+
+  // password length set by user
+  var lengthInput = prompt("How many characters would you like your password to contain?");
+
+  // Boolean Variables asking for user input
+  var numericInput = confirm("Click Ok to confirm including numeric characters");
+  var lowerInput = confirm("Click Ok to confirm including lowercase characters");
+  var upperInput = confirm("Click Ok to confirm including uppercase characters");
+  var specialInput = confirm("Click Ok to confirm including special characters");
+
+  if (numericInput) {
+    passwordCharSet += numericChar;
+  }
+  if (lowerInput) {
+    passwordCharSet += lowerChar;
+  }
+  if (upperInput) {
+    passwordCharSet += upperChar;
+  }
+  if (specialInput) {
+    passwordCharSet += specialChar;
+    console.log(passwordCharSet)
+  }
+
 }
+
+// // Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
