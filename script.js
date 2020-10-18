@@ -46,11 +46,12 @@ function generatePassword() {
   if (specialInput) {
     passwordCharSet += specialChar;
 
-    console.log(passwordCharSet)
   }
+  console.log(passwordCharSet)
+  
   // empty string to fill random password
   var randomPassword = "";
-  // for loop generates random characters within selected criteria 
+  // for loop generates random characters within selected criteria
   for (var i = 0; i < pLength; i++) {
     randomPassword += passwordCharSet.charAt(Math.floor(Math.random() *passwordCharSet.length));
   }
