@@ -7,7 +7,6 @@ var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numericChar = "0123456789";
 var specialChar = "!@#$%^&*=+-_><|()[]\/?.,~`";
 var pLength = "";
-var passwordCharSet = "";
 
 
 // function that writes password
@@ -23,6 +22,7 @@ function writePassword() {
 
 function generatePassword() {
 
+  var passwordCharSet = "";
   // password length set by user
   var pLength  = prompt("How many characters would you like your password to contain?");
 
@@ -37,18 +37,30 @@ function generatePassword() {
   if (numericInput) {
     passwordCharSet += numericChar;
   }
+  else {
+    passwordCharSet - numericChar
+  }
   if (lowerInput) {
     passwordCharSet += lowerChar;
+  }
+  else {
+    passwordCharSet - lowerChar
   }
   if (upperInput) {
     passwordCharSet += upperChar;
   }
+  else {
+    passwordCharSet - upperChar
+  }
   if (specialInput) {
     passwordCharSet += specialChar;
-
   }
-  console.log(passwordCharSet)
-  
+  else {
+    passwordCharSet - specialChar
+  }
+
+      console.log(passwordCharSet)
+
   // empty string to fill random password
   var randomPassword = "";
   // for loop generates random characters within selected criteria
